@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+   <title>Aplikasi Kuis Dengan Javascript</title>
+<!--   My Css-->
+   <style>
+	   body{
+           background:  #000046;  /* fallback for old browsers */
+           background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+           background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	   }
+	   
+	   .border-all{
+		   box-shadow:2px -1px 7px 1px white,
+		              0px 2px 7px 1px white;
+		   border:2px solid orange;
+		   
+	   }
+	   .pA1{
+		   text-align:center;
+	   }
+	  
+	 </style>
+  </head>
+  <body>
+ 
+   <div class="container">
+   <div class="row" id="noneContent">
+   	<div class="col-md">
+   	<center>
+   		<div class="card mt-5 border-all w-75" >
+    <div class="card-body">
+    <h5 class="card-title text-center">Aplikasi Kuis Dengan Javascript</h5>
+    <p class="card-text font-weight-bold text-center"> Saya buat 5 kuis masing masing jika berhasil skor bertambah 20 poin. </p>
+  </div>
+</div>
+		</center>
+   	</div>
+   </div>
+     <form id="form" method="post">
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+   
+    <p class="pA1 font-weight-bold">20 Poin</p>
+    	<h6 class="">1. Manakah singkatan dari HTML itu?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="html" id="html"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Text Markup Language">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="html"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Transfer Market Long">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="html"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Transfer Mood Lose">
+</div>
+  </div>
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Kuis Kedua -->
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    <p class="pA1 font-weight-bold">20 Poin</p>
+    	<h6 class="">2. Siapakah Pencipta Javascript?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="javascript" id="javascript"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Brendan Eich">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="javascript"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Douglas Crockford">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="javascript"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Mark Zuckerberg">
+</div>
+  </div>
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Kuis Ketiga-->
+  			<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+   
+    <p class="pA1 font-weight-bold">20 Poin</p>
+    	<h6 class="">3. Bahasa Pemrograman Mana Yang Menggunakan Berbasis Client Side?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="pemrograman"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript & PHP">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="pemrograman" id="pemrograman"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="pemrograman"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="PHP">
+</div>
+   
+  </div>
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Kuis Keempat-->
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    
+    <p class="pA1 font-weight-bold">20 Poin</p>
+    	<h6 class="">4. Manakah Yang Termasuk Database Management System?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dbms" id="dbms"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="MYSQL">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dbms"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="CSS Flexbox">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dbms"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Delphi 7">
+</div>
+  
+  </div>
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--  	Kuis Kelima -->
+   			<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+  
+    <p class="pA1 font-weight-bold">20 Poin</p>
+    	<h6 class="">5. Manakah Yang Termasuk Bahasa Pemrograman Untuk Dekstop?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dekstop"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dekstop" id="dekstop"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Delphi 7">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" aria-label="Radio button for following text input" name="dekstop"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="HTML">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+  		</center>  
+   		</div>			
+   	</div> 
+   	<div class="row">
+   	<div class="col-md-10 pr-5">
+   	<div class="float-right">
+   	<button type="submit" class="btn btn-warning font-weight-bold   mb-5">Submit</button>
+   	
+		</div>
+		
+		</div>
+   
+	   </div>
+	    </form>
+   </div>
+	  
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+    <script src="script41.js"></script>
+  </body>
+</html>
