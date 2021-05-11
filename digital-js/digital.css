@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:#091921;
+/*	#091921*/
+}
+.container input[type="text"]{
+	position: absolute;
+	top:300px;
+	right:870px;
+	background:#091921;
+	color:yellow;
+	outline:none;
+	border-radius:24px;
+	box-shadow: 1px 1px 10px aqua;
+	border-top:3px solid aqua;
+	border-left:3px solid aqua;
+	border-right:3px solid aqua;
+	border-bottom:3px solid aqua;
+	text-align:center;
+	width:100px;
+	height:90px;
+	font-size:60px;
+	-webkit-box-reflect:below 1px linear-gradient(transparent,#0008);
+}
+
+.container2 input[type="text"]{
+	position: absolute;
+	top:300px;
+	right:630px;
+	background:#091921;
+	color:yellow;
+	outline:none;
+	border-radius:24px;
+	box-shadow: 1px 1px 10px aqua;
+	border-top:3px solid aqua;
+	border-left:3px solid aqua;
+	border-right:3px solid aqua;
+	border-bottom:3px solid aqua;
+	text-align:center;
+	width:100px;
+	height:90px;
+	font-size:60px;
+	-webkit-box-reflect:below 1px linear-gradient(transparent,#0008);
+}
+
+.container3 input[type="text"]{
+	position: absolute;
+	top:300px;
+	right:380px;
+	background:#091921;
+	color:yellow;
+	outline:none;
+	border-radius:24px;
+	box-shadow: 1px 1px 10px aqua;
+	border-top:3px solid aqua;
+	border-left:3px solid aqua;
+	border-right:3px solid aqua;
+	border-bottom:3px solid aqua;
+	text-align:center;
+	width:100px;
+	height:90px;
+	font-size:60px;
+	-webkit-box-reflect:below 1px linear-gradient(transparent,#0008);
+}
