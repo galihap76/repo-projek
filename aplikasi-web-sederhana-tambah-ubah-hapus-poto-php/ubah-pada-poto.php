@@ -4,7 +4,7 @@ require "functions-pada-poto.php";
 //Ambil data di URL
 $id=$_GET["id"];
 
-//query data mahasiswa berdasarkan id
+//query data poto atau gambar berdasarkan id
 $gbr = query("SELECT * FROM gambar WHERE id=$id")[0];
 
 
