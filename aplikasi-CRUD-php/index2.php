@@ -43,7 +43,7 @@ if(isset($_POST["cari"])){
 	<?php $i = 1; ?>
 	<?php foreach($karyawan as $row) : ?>
 	<tr>
-		<td><?= $i ?></td>
+		<td><?= $i; ?></td>
 		<td>
 			<a href="ubah2.php?id=<?php echo $row["id"]; ?>">ubah</a> 
 			<a href="hapus2.php?id=<?php echo $row["id"];?>" onClick="return confirm('yakin?');">hapus</a>
