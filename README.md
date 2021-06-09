@@ -1,8 +1,4 @@
-- 👋 Hello, saya @galihap76.
-- 👀 Saya seorang pelajar.
-- 🌱 Saya sedang belajar dalam hal dunia programming.
-- 💞️ Saya sedang berkolaborasi.
-- 📫 Bagaimana menghubungi saya.
+Beberapa projek yang telah saya buat telah saya repository di sini.
 
 <!---
 galihap76/galihap76 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
