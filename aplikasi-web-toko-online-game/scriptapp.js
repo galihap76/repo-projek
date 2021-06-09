@@ -196,7 +196,7 @@ function cekBtn5(){
 	}
 
 function cekBtn6(){
-	//Battlefield 4
+	//Yakuza
 	container.style.display='none';
 	hilangkankalimat.style.display='none';
 	cekcontainerSelengkapnya.innerHTML=`<div class="card mb-3 w-75">
