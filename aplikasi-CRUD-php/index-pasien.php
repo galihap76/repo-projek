@@ -4,7 +4,7 @@ require 'database-pasien.php';
 //akses pada file database ke function query
 $pasien = query("SELECT * FROM pasien");
 
-// ketika tombol cari ditekan
+// ketika tombol cari ditekan jalankan kondisi ini
 if(isset($_POST["cari"])){
 	$pasien = cari ($_POST["keyword"]);
 }
