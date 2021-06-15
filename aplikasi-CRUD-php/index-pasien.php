@@ -1,8 +1,10 @@
 <?php
+//akses pada database pasien
 require 'database-pasien.php';
+//akses pada file database ke function query
 $pasien = query("SELECT * FROM pasien");
 
-// tombol cari ditekan
+// ketika tombol cari ditekan
 if(isset($_POST["cari"])){
 	$pasien = cari ($_POST["keyword"]);
 }
@@ -122,8 +124,11 @@ if(isset($_POST["cari"])){
 		form.addEventListener('submit', cekValidasi);
 		
 		function cekValidasi(e){
+		//cek apakah user menekan tombol dan mengisi data kosong?
 		if(form.keyword.value===""){
+		//jika iya jalankan alert pada javascript
 			alert('Maaf pencarian tidak boleh kosong!');
+		//gagalkan akses untuk mengirim data submit
 			e.preventDefault();
 		  }
 			return false;
