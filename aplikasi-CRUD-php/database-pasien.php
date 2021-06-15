@@ -50,6 +50,7 @@ function tambah($data){
 }
 //panggil dan buat data untuk upload
 function upload(){
+	//dapatkan data dari file upload poto
 	$namaFile=$_FILES["poto_pasien"]["name"];
 	$ukuranFile=$_FILES["poto_pasien"]["size"];
 	$error=$_FILES["poto_pasien"]["error"];
@@ -120,19 +121,24 @@ function ubah($data){
 		$poto_pasien = upload();
 	}
 	
-
+        //ubah data lama menjadi data baru
 	$query = "UPDATE pasien SET nama_pasien='$nama_pasien', umur_pasien='$umur_pasien', tempat_tinggal='$tempat_tinggal', kamar_pasien='$kamar_pasien', check_in='$check_in', check_out='$check_out', poto_pasien='$poto_pasien' WHERE id =$id";
+	//perintahkan SQL untuk melakukan CRUD
 	mysqli_query($conn,$query);
+	//kembalikan jumlah pengaruhnya database
 	return mysqli_affected_rows($conn);
 }
-
+//hapus data pasien
 function hapus($id){
+	//panggil $conn dari variabel global
 		global $conn;
+	//perintahkan SQL untuk melakukan CRUD
 		mysqli_query($conn, "DELETE FROM pasien WHERE id = $id");
-		
+	//kembalikan jumlah pengaruhnya database
 		return mysqli_affected_rows($conn);
 	}
 
+//cari pasien untuk mempermudah pencarian data pasien dalam tabel
 function cari($keyword){
 	$query = "SELECT * FROM pasien WHERE nama_pasien LIKE '%$keyword%' OR umur_pasien LIKE '%$keyword%' OR tempat_tinggal LIKE '%$keyword%' OR kamar_pasien LIKE '%$keyword%' OR check_in LIKE '%$keyword%' OR check_out LIKE '%$keyword%'";
 	return query($query);
