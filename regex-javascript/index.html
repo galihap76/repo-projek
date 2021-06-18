@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Regexp Javascript</title>
+<style>
+	*{
+		padding: 0;
+		margin:0;
+	}
+	.container-nav{
+		width:100%;
+		background-color: yellow;
+		font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+		text-align:center;
+	}
+	button{
+		position: absolute;
+		bottom:330px;
+		right:350px;
+		background-color: yellow;
+		border:none;
+		height:30px;
+		border-radius:24px;
+		width:100px;
+	}
+	.username{
+		position:absolute;
+		left:470px;
+		top:100px;
+		font-size: 20px;
+		padding-left:3px;
+	}
+	.username p{
+		font-size:17px;
+	}
+	.username input[type="text"]{
+		width:300px;
+	}
+	.password{
+		position:absolute;
+		left:470px;
+		top:180px;
+		font-size: 20px;
+	}
+	.password p{
+		font-size:17px;
+	}
+	.password input[type="password"]{
+		width:300px;
+	}
+</style>
+</head>
+
+
+
+<body>
+<div class="container-nav">
+	<h1>Regular Expression</h1>
+</div>
+
+<form method="post">
+<!-- Username-->
+   <div class="username">
+    <label for="username">Buat Username : </label>
+    <input type="text" name="username" id="username" placeholder="username" autocomplete="off" maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+     <p style="display:none;color:red">Panjang username minimal 8 karakter dan harus mengandung huruf kapital, angka, dan simbol.</p>
+     <p style="display:none;color:red">Maaf username jangan kosong!</p>
+    
+    </div>
+<!--  Akhir username-->
+   
+<!--  Password-->
+   
+    <div class="password">
+    <label for="password">Buat Password : </label>
+    <input type="password" name="password" id="password" placeholder="password" autocomplete="off"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+     <p style="display:none;color:red">Panjang password minimal 8 karakter dan harus mengandung huruf kapital, angka, dan simbol.</p>
+     <p style="display:none;color:red">Maaf username jangan kosong!</p>
+    </div>
+<!--    Akhir password-->
+    <button type="submit">Kirim</button>
+</form>
+
+<script src="regex-js.js"></script>
+</body>
+</html>
