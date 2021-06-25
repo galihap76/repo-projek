@@ -36,7 +36,7 @@ function getMealList(){
             });
             mealList.classList.remove('notFound');
         } else{
-            html = "Sorry, we didn't find any meal!";
+            html = "Maaf, tidak di temukan bahan atau makanan yang anda cari :(";
             mealList.classList.add('notFound');
         }
 
