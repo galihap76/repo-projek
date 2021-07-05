@@ -1,12 +1,15 @@
 program latihan1;
 
-uses crt;
+{$APPTYPE CONSOLE}
 
-var
-nama : string;
+uses
+  SysUtils;
+
 begin
-nama := 'galih';
+  { TODO -oUser -cConsole Main : Insert code here }
 
-  write('nama anda adalah ' + nama);
-  ReadLn;
+  writeln('Hello World');
+  writeln('Program pertama saya dalam pascal');
+  readln;
+
 end.

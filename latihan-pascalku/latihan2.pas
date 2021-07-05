@@ -1,14 +1,20 @@
-program program2;
-uses crt;
-var
-namaSaya:string;
-begin
-namaSaya:='galih';
+program latihan2;
 
-write('Masukkan nama anda ');ReadLn(namaSaya);
-if namaSaya='galih' then
-  write('Nama anda adalah ' + namaSaya)
-  else
-  write('Maaf nama anda bukanlah galih!');
-  readln;
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+  var
+  nama_saya :string;
+  umur_saya : integer;
+  citacita_saya: string;
+
+begin
+   write('Cek nama anda :'); readln(nama_saya);
+   write('Cek umur anda :'); readln(umur_saya);
+   write('Beritahu cita cita anda :'); readln(citacita_saya);
+   writeln('Nama anda adalah ', nama_saya, ' umur anda ', umur_saya,' cita cita anda seorang ',citacita_saya);
+   readln;
+
 end.
