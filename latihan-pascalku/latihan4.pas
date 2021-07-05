@@ -1,15 +1,33 @@
 program latihan4;
-
-{$APPTYPE CONSOLE}
-
-uses
-  SysUtils;
-   var
-   nama : string;
+uses crt;
+var
+angka:Integer;
+namaSaya:String;
 begin
-  { TODO -oUser -cConsole Main : Insert code here }
-  nama := 'Khalid';
-   writeln ( nama = 'Bilal');
-   writeln(nama <> 'Bilal');
-   readln;
+clrscr;
+  namaSaya:='galih';
+  
+  write('Masukkan nama anda sebagai pemrogram untuk akses aplikasi program hitung sederhana: '); readln(namaSaya);
+  if namaSaya <> 'galih' then
+    begin
+  writeLn('Maaf anda bukanlah admin sebagai seorang pemrogram!');   
+  end
+  else if namaSaya = '' then
+  begin
+  writeln('Maaf kolom masukkan jangan kosong, anda tidak berhak masuk aplikasi!');
+  end
+  else
+  if namaSaya = 'galih' then
+  begin
+  writeLn('Halo galih selamat datang di aplikasi anda!');
+  writeLn('Silakan tebak berapa angka jumlah di bawah ini?');
+  writeln('1+1 ?');readln(angka);
+  if angka = 2 then
+  begin
+  writeln('Selamat jawaban anda benar!');
+  end
+  else
+   writeLn('Maaf jawaban anda salah!');
+  end;
+  readln;
 end.

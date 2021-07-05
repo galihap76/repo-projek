@@ -1,16 +1,13 @@
-program latihan3;
-
-{$APPTYPE CONSOLE}
-
-uses
-  SysUtils;
-  var 
-  s,keliling : integer;
+program program3;
+uses crt;
+var
+nomor:integer;
 
 begin
-  { TODO -oUser -cConsole Main : Insert code here }
- write('Masukan Nilai Sisi : '); readln(s);
- keliling := 4 * s;
- writeln('Keliling Persegi = ',keliling);
-readln;
+clrscr;
+  
+  for nomor:=1 to 7 do writeln ('nomor ke  ' 
+    + nomor);
+    
+  readln;
 end.
