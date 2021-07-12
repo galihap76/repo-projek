@@ -14,7 +14,11 @@ begin
   writeln('Hello World ', x);
   if(x=5)then
   break;
-  writeln;
+end;
+
+begin
+    writeln;
+
 end;
 
 //CONTINUE
