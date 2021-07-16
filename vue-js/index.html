@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kalkulator Sederhana Dengan Vue Js</title>
+<style>
+	html{
+		background-color: #07393c;
+	}
+	.title{
+		font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana," sans-serif";
+		color: #90DDf0;
+		text-align:center;
+	}
+	.title span{
+		color:rgb(0, 179, 119);
+	}
+	.kalkulator{
+		background-color: white;
+		text-align:center;
+		padding:20px;
+		border:1px solid black;
+		margin-left:20%;
+		margin-right:20%;
+		border-top-left-radius: 30px;
+		border-top-right-radius: 30px;
+	}
+	.kalkulator input{
+		padding: 15px;
+		background-color: #f0EDEE;
+		color:#0a090c;
+		border:none;
+	}
+	.kalkulator input::placeholder{
+		color:#0a090c;
+		text-align: center;
+	}
+	button{
+		padding:20px;
+		color:black;
+		border:none;
+		background-color: #90DDf0;
+		text-align: center;
+	}
+	button:hover{
+		transition: .5s;
+		color:#07393c;
+		font-weight: bold;
+		cursor:pointer;
+	}
+</style>
+</head>
+
+<body>
+<div id="app">
+	{{mulai}}
+	<h1 v-bind:class="tampilan">Kalkulator Menggunakan <span>Vue Js</span></h1>
+	<div class="kalkulator">
+		<input type="text" placeholder="Masukan angka pertama" id="angka1">
+		<input type="text" placeholder="Masukan angka kedua" id="angka2">
+		<p>Pilih Operasi</p>
+		<div>
+			<button value="tambah" id="tambah" onclick="kal.tambah()">+</button>
+			<button value="kurang" id="kurang" onclick="kal.kurang()">-</button>
+			<button value="kali" id="kali" onclick="kal.kali()">*</button>
+			<button value="bagi" id="bagi" onclick="kal.bagi()">/</button>
+		</div>
+		<div>
+			<p>{{message}}</p>
+			<p>{{hasil}}</p>
+			<p>{{author}}</p>
+		</div>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+	let kal = new Vue({
+	  el: `#app`,
+		data:{
+			tampilan: `title`,
+			hasil : 0,
+			message: `hasil`,
+			author: `GalihAp76`
+		},
+		computed:{
+		mulai:function(){
+		alert('Selamat datang di program kalkulator sederhana :)');
+	}
+	  },
+	   methods:{
+		   tambah(){
+			   let angka1 = document.getElementById('angka1').value;
+			   let angka2 = document.getElementById('angka2').value;
+			   let hasil = parseInt(angka1) + parseInt(angka2);
+			   this.hasil = angka1 + ` + ` + angka2 + ` = ` + hasil;
+		   },
+		   kurang(){
+			   let angka1 = document.getElementById('angka1').value;
+			   let angka2 = document.getElementById('angka2').value;
+			   let hasil = parseInt(angka1) - parseInt(angka2);
+			   this.hasil = angka1 + ` - ` + angka2 + ` = ` + hasil;
+			   
+		   },
+		   kali(){
+			   let angka1 = document.getElementById('angka1').value;
+			   let angka2 = document.getElementById('angka2').value;
+			   let hasil = parseInt(angka1) * parseInt(angka2);
+			   this.hasil = angka1 + ` x ` + angka2 + ` = ` + hasil;
+			   
+		   },
+		   bagi(){
+			   let angka1 = document.getElementById('angka1').value;
+			   let angka2 = document.getElementById('angka2').value;
+			   let hasil = parseFloat(angka1) / parseFloat(angka2);
+			   this.hasil = angka1 + ` / ` + angka2 + ` = ` + hasil;
+			   
+		   }
+	   }
+	})
+	
+</script>
+</body>
+</html>
