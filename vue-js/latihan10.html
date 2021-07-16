@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 2</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+	<center><img src="images/gambar-vue.jpg" alt=""/></center>
+	<br>
+	
+	<div class="app">
+  <button v-on:click="counterComputed++">tombol yang dihitung</button> 
+  <p>{{ counterComputed }}</p> <br/> 
+  <button v-on:click="counterMethod++">tombol metode</button>    
+  <p>{{ counterMethod }}</p> <br/>
+  {{ printTextMethod() }} 
+  {{ printTextComputed }} 
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+let vm = new Vue({
+		el :`.app`,	    
+	   data: function() { 
+  return { 
+    counterComputed: 0, 
+    counterMethod: 0 
+  }; 
+}, 
+computed: { 
+  printTextComputed: function() { 
+    console.log("penghitung dicetak dari dihitung:",      
+    this.counterComputed); 
+  } 
+}, 
+methods: { 
+  printTextMethod: function() { 
+    console.log("penghitung dicetak dari metode:", this.counterMethod); 
+  } 
+},
+	})
+</script>
+</body>
+</html>

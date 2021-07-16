@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 2</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+	<center><img src="images/gambar-vue.jpg" alt=""/></center>
+<div class="app">
+<h2>{{totalBilangan}}</h2>
+<h2>Nama Saya Adalah : {{namaLengkap}}</h2>
+<h2>{{emailKu}}</h2>
+<button v-on:click="pesanEmail">Tekan tombol ini!</button>
+</div>
+
+<div class="app2">
+	<h3>{{pesanHello}}</h3>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+	
+const  vm = new Vue({
+	el : `.app`,
+	data :{
+		angka:5,
+		namaDepan: `Galih`,
+		namaBelakang: ` Anggoro Prasetya`,
+		emailKu: ``
+	},
+	methods:{
+		pesanEmail: function(){
+			 this.emailKu = `g4lihanggoro@gmail.com`
+		}
+	},
+	computed:{
+		totalBilangan:function(){
+			return this.angka%2===0 ? `Genap` : `Ganjil`
+	},
+		namaLengkap: function(){
+			return this.namaDepan + this.namaBelakang
+		 }	
+	}
+})
+
+const vm2= new Vue({
+	el: `.app2`,
+	data:{
+		pesan:`Hello World!`
+	},
+	computed:{
+		pesanHello: function(){
+			return this.pesan
+	}
+  }
+})
+</script>
+</body>
+</html>

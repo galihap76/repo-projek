@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 2</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+<img src="images/gambar-vue.jpg" alt=""/>
+<!--
+<div id="app">
+  {{ pesan }}
+</div>
+<div id="app-2">
+  <span v-bind:title="pesan">
+    Arahkan mouse Anda kesini dan tunggu dalam beberapa detik
+    untuk melihat judul pesan yang dinamis
+  </span>
+</div>
+-->
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.teks }}
+    </li>
+  </ol>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+	
+//var app = new Vue({
+//  el: '#app',
+//  data: {
+//    pesan: 'Hai, ini Vue!'
+//  }
+//})
+//
+//var app2 = new Vue({
+//  el: '#app-2',
+//  data: {
+//    pesan: 'Anda memuat halaman ini pada jam ' + new Date().toLocaleString()
+//  }
+//})
+
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { teks: 'Belajar JavaScript' },
+      { teks: 'Belajar Vue' },
+      { teks: 'Buat proyek keren' }
+    ]
+  }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 2</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+	<center><img src="images/gambar-vue.jpg" alt=""/></center>
+<div class="app">
+<h2>{{bilangan}}</h2>
+<h2>Bilangan ini adalah {{infoBilangan}}</h2>
+	</div>
+	<br>
+	
+	<div class="app2">
+		<div>nama lengkap anda adalah : {{namaLengkap}}</div>
+		<div>umur anda adalah : {{umurSaya}}</div>
+		<div>hobi anda adalah : {{hobiSaya}}</div>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+let vm = new Vue({
+		el :`.app`,	    
+	    data :{
+			bilangan : 6
+		},
+	computed:{
+		infoBilangan:function(){
+			return this.bilangan%2==0 ? `genap` : `ganjil`
+		}
+	  }
+	})
+
+let vm2 = new Vue({
+	el:`.app2`,
+	data:{
+		nama:`galih anggoro prasetya`,
+		umur:17,
+		hobi:`ngoding`
+	},
+	computed:{
+		namaLengkap:function(){
+			return this.nama
+		},
+		umurSaya:function(){
+			return this.umur
+		},
+		hobiSaya:function(){
+			return this.hobi
+		}
+	}
+})
+
+</script>
+</body>
+</html>

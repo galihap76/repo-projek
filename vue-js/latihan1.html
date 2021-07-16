@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 1</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+<div id="app">
+<header>
+<img src="images/gambar-vue.jpg" alt=""/>
+<h1>{{ getname()}}</h1>
+	</header>
+<p>The progress
+javascript framework</p>
+
+<footer id="footer">
+	<p>Copyright 2021.</p>
+</footer>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+	const vm = new Vue({
+	el:`#app`,
+	data:{
+		//string, boolean, number, array, object
+		name : `Galih Anggoro Prasetya`,
+		message: `Hari pertama saya belajar Vue Js`
+	  },
+		methods:{
+			getname: function(){
+				return `Hello, ` + this.name
+			},
+			ubahNama: function(namaBaru){
+				this.name=namaBaru
+				return this.getname()
+			}
+		}
+	})
+</script>
+</body>
+</html>

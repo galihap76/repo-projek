@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Belajar Vue Js 2</title>
+<style>
+	body{
+		margin:5%;
+		font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	}
+	
+</style>
+</head>
+
+<body>
+<img src="images/gambar-vue.jpg" alt=""/>
+<div class="app">
+<h3>Hasil dari {{bil1}} + {{bil2}} adalah : {{totalBilangan}}</h3>
+<input type="text" v-model="pesan">{{cekPesan}}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script>
+	
+const  vm = new Vue({
+	el : `.app`,
+	data :{
+		bil1 : 5,
+		bil2:5,
+		pesan:``,
+		cekPesan: ``
+	},
+	computed: {
+		totalBilangan: function(){
+			return this.bil1 + this.bil2
+		}
+	},
+	watch:{
+		pesan: function(){
+			return this.cekPesan = ` sedang mengetik...`
+		}
+	}
+})
+</script>
+</body>
+</html>
