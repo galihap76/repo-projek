@@ -1,11 +1,9 @@
 <?php
-require 'functions.php';
-$mahasiswa = query("SELECT * FROM mahasiswa");
-
-
+//koneksi ke database
+$conn = mysqli_connect("localhost", "root", "", "phpdasar"); 
 
 //ambil data dari tabel mahasiswa / query data mahasiswa
-//$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
+$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 
 //ambil data (fetch) mahasiswa dari object result
 //mysqli_fetch_row() //mengembalikan array numerik
@@ -26,7 +24,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Halaman Admin</title>
+<title>Halaman Admin</title>
 </head>
 
 <body>
@@ -43,7 +41,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 		<th>Jurusan</th>
 	</tr>
 	<?php $i = 1; ?>
-	<?php foreach($mahasiswa as $row) : ?>
+	<?php while( $row = mysqli_fetch_assoc($result)) : ?>
 	<tr>
 		<td><?= $i ?></td>
 		<td>
@@ -57,7 +55,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 		<td><?= $row["jurusan"]; ?></td>
 	</tr>
 	<?php $i++; ?>
-	<?php endforeach; ?>
+	<?php endwhile; ?>
 </table>
 </body>
 </html>
