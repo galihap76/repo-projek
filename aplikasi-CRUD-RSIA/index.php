@@ -2,6 +2,16 @@
 session_start();
 
 include_once 'database-query.php';
+
+
+//visitors
+$visitors = mysqli_query($conn, "SELECT * FROM visitor");
+
+while($row = mysqli_fetch_array($visitors)){
+ $jml_sekarang = $row['visitor'];
+ $jml_baru = $jml_sekarang + 1;
+ $update_visitors = mysqli_query($conn, "UPDATE visitor SET visitor='$jml_baru'");
+  }
 if(!isset($_SESSION["login"])){
 	header("Location: login.php");
 	exit;
@@ -21,7 +31,8 @@ if(!isset($_SESSION["login"])){
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Beranda Admin</title>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link href="styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
         <style>
@@ -38,23 +49,30 @@ if(!isset($_SESSION["login"])){
 			.rawat-inap{
 				background-color:#FF80F6;
 			}
+			.bi-eye-fill{
+				filter: invert(1);
+			}
 		</style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <h4 class="judul-projek">Sistem Informasi Rumah Sakit</h4>
             <button class="btn btn-link btn-sm order-1 order-lg-0  ml-4" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
+            <!-- ruang nav-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">              
             </form>
             <!-- Navbar-->
-            <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown">
+      
+            <i class="bi bi-eye-fill ml-5 pl-3"><?php echo $jml_baru;?></i>
+       
+            <ul class="navbar-nav ml-auto ml-md-0">               
+                <li class="nav-item dropdown ml-5">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         
-                        <a class="dropdown-item" href="logout.php">Logout</a>
+                        <a class="dropdown-item" href="logout.php">Logout</a>                     
                     </div>
+      
                 </li>
             </ul>
         </nav>
@@ -84,7 +102,7 @@ if(!isset($_SESSION["login"])){
                                             <a class="nav-link" href="lupa-password.php">Forgot Password</a>           				                                                      
                         </div>
                         
-			  <div class="sb-sidenav-menu-heading">Data Rumah Sakit Ibu & Anak</div>
+			  <div class="sb-sidenav-menu-heading">Rumah Sakit Ibu & Anak</div>
                         <a class="nav-link" href="data-pasien.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Data Pasien
@@ -93,7 +111,15 @@ if(!isset($_SESSION["login"])){
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                               Halaman Tambah Pasien
                             </a>
-				
+				<a class="nav-link" href="profil-dokter.php">
+                                <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
+                              Profil Dokter
+                            </a>
+                            <a class="nav-link" href="rawat-inap.php">
+                                <div class="sb-nav-link-icon"> <i class="bi bi-subtract"></i></div>
+                              Rawat Inap
+                            </a>
+                           
                     </div>
                 </nav>
             </div>
@@ -167,3 +193,4 @@ if(!isset($_SESSION["login"])){
         <script src="scripts.js"></script>
     </body>
 </html>
+
