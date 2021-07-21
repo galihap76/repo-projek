@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	
+}
+
+
+.textbox{
+	position:relative;
+	font-size:1px;
+	font-family:Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+	display: flex;
+	right:-550px;
+	color:#C4CCFC;
+	letter-spacing: 3px;
+	animation:GALIH 4s linear;
+}
+
+@keyframes GALIH{
+	30%, 85%{
+		font-size:80px;
+		transform:scale(2) rotate(360deg);
+		filter:brightness(2);
+		text-shadow:1px 0px 5px cyan;
+		
+		
+	}
+}
+
+
+html,body{
+	width:100px;
+	height:100px;
+}
+
+body{
+	background: #0d161f;
+}
+
+.loader-container{
+	width:200px;
+	height:200px;
+	position:relative;
+	bottom:-500px;
+	right:-1190%;
+	transform:translate(-50%, -50%);
+	overflow:hidden;
+	
+}
+
+.loader-div{
+	width:calc(100% - 16px);
+	height:calc(100% - 16px);
+	border:8px solid #162534;
+	border-radius:50%;
+	border-top:8px solid #09f;
+	animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
