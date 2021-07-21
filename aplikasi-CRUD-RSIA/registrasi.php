@@ -33,7 +33,7 @@ if(isset($_POST["register"])){
         <title>Sign Up</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<!--        <link href="css/styles.css" rel="stylesheet" />-->
+        <link href="styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
 <!--        My Css-->
    <style>
@@ -79,13 +79,7 @@ if(isset($_POST["register"])){
                                                 <label class="small mb-1" for="password2">Password</label>
                                                 <input class="form-control py-4" id="password2" name="password2" type="password" placeholder="Konfirmasi Password" required/>
                                               
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="custom-control custom-checkbox">
-                                                    <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
-                                                    <label class="custom-control-label" for="rememberPasswordCheck">Remember password</label>
-                                                </div>
-                                            </div>
+                                            </div>                              
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <button type="submit" class="btn btn-primary" name="register">Sign Up</a>
                                             </div>
@@ -104,3 +98,4 @@ if(isset($_POST["register"])){
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
+
