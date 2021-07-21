@@ -3,6 +3,7 @@ session_start();
   //koneksi database
   include_once "database-query.php";
 
+
 if(!isset($_SESSION["login"])){
 	header("Location: login.php");
 	exit;
@@ -31,6 +32,7 @@ if(isset($_POST["cari"])){
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Data Pasien</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link href="styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
         <style>
@@ -56,7 +58,6 @@ if(isset($_POST["cari"])){
              .form-control{
                     width:35%;
     			}			
-			
 		</style>
     </head>
     <body class="sb-nav-fixed">
@@ -74,7 +75,7 @@ if(isset($_POST["cari"])){
                 </div>
             </form>
             <!-- Navbar-->
-  
+         	
             <ul class="navbar-nav ml-auto ml-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -91,7 +92,7 @@ if(isset($_POST["cari"])){
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                            <div class="potoku">
-                            <center><img src="images/IMG-20201120-WA0045.jpg"></center>
+                            <center><img src="img/PR.ico"></center>
 							</div>
                            <div class="sb-sidenav-menu-heading">Dashboard</div>
                             <a class="nav-link" href="index.php">
@@ -110,7 +111,7 @@ if(isset($_POST["cari"])){
                                             <a class="nav-link" href="registrasi.php">Register</a>
                                             <a class="nav-link" href="lupa-password.php">Forgot Password</a>           				                                                      
                         </div>
-								<div class="sb-sidenav-menu-heading">Data Rumah Sakit Ibu & Anak</div>
+								<div class="sb-sidenav-menu-heading">Rumah Sakit Ibu & Anak</div>
                         <a class="nav-link" href="data-pasien.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Data Pasien
@@ -119,7 +120,14 @@ if(isset($_POST["cari"])){
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                               Halaman Tambah Pasien
                             </a>
-				
+				<a class="nav-link" href="profil-dokter.php">
+                                <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
+                              Profil Dokter
+                            </a>
+                            <a class="nav-link" href="rawat-inap.php">
+                                <div class="sb-nav-link-icon"> <i class="bi bi-subtract"></i></div>
+                              Rawat Inap
+                            </a>
                     </div>
 				
                 </nav>
