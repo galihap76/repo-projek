@@ -48,6 +48,10 @@
 		font-weight: bold;
 		cursor:pointer;
 	}
+	.title2{
+		text-align:center;
+		color:white;
+	}
 </style>
 </head>
 
@@ -55,16 +59,15 @@
 <div id="app">
 	{{mulai}}
 	<h1 v-bind:class="tampilan">Kalkulator Menggunakan <span>Vue Js</span></h1>
+	<h1 v-bind:class="tampilan2">Programmer</h1>
 	<div class="kalkulator">
 		<input type="text" placeholder="Masukan angka pertama" id="angka1">
 		<input type="text" placeholder="Masukan angka kedua" id="angka2">
 		<p>Pilih Operasi</p>
-		<div>
-			<button value="tambah" id="tambah" onclick="kal.tambah()">+</button>
-			<button value="kurang" id="kurang" onclick="kal.kurang()">-</button>
-			<button value="kali" id="kali" onclick="kal.kali()">*</button>
-			<button value="bagi" id="bagi" onclick="kal.bagi()">/</button>
-		</div>
+			<button  v-on:click="tambah">+</button>
+			<button  v-on:click="kurang">-</button>
+			<button  v-on:click="kali">*</button>
+			<button  v-on:click="bagi">/</button>
 		<div>
 			<p>{{message}}</p>
 			<p>{{hasil}}</p>
@@ -78,6 +81,7 @@
 	  el: `#app`,
 		data:{
 			tampilan: `title`,
+			tampilan2: `title2`,
 			hasil : 0,
 			message: `hasil`,
 			author: `GalihAp76`
