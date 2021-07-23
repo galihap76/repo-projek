@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplikasi Toko Vue Js</title>
+</head>
+
+<body>
+
+<!-- elemen kontainer untuk aplikasi -->
+  <div class="app1">
+    <div class="order-detail">
+      <p>Ini adalah detail dari pesanan anda: </p>
+      <hr>
+      <img :src="cover" width="100" />
+      <h4>{{ name }}</h4>
+      Qty: <input type="number" v-model:value="qty" min="1" max="10" />
+      Total: Rp {{ price * qty }}
+    </div>
+    <hr>
+    <label><input type="checkbox" v-model:value="showBonus"> Show Bonus</label>
+    <div class="detail" v-if="showBonus">
+      <p v-if="qty >= 10">Maaf kamu hanya boleh beli {{ qty }} aja yah.. soalnya kita gak punya banyak stok</p>
+      <p v-else-if="qty >= 5">Whoaa tukang borong nih!</p>
+      <p v-else-if="qty >= 2">Selamat! Kamu dapat bonus, karena membeli {{ qty }} buku</p>
+      <p v-else>Beli lebih banyak lagi untuk dapatkan bonus :)</p>
+    </div>
+  </div>
+  
+  
+  <div class="app2">
+  <hr>
+  <img v-bind:src="cover" width="100" />
+  <h4>{{name}}</h4>
+  Qty : <input type="number" v-model:value="qty" min="1" max="10"/>
+  Total: Rp {{price * qty}}
+   <hr>
+    <label><input type="checkbox" v-model:value="showBonus"> Show Bonus</label>
+    <div class="detail" v-if="showBonus">
+      <p v-if="qty >= 10">Maaf kamu hanya boleh beli {{ qty }} aja yah.. soalnya kita gak punya banyak stok</p>
+      <p v-else-if="qty >= 5">Whoaa tukang borong nih!</p>
+      <p v-else-if="qty >= 2">Selamat! Kamu dapat bonus, karena membeli {{ qty }} buku</p>
+      <p v-else>Beli lebih banyak lagi untuk dapatkan bonus :)</p>
+    </div>
+	</div>
+	
+	<div class="app3">
+		 <hr>
+  <img v-bind:src="cover" width="100" />
+  <h4>{{name}}</h4>
+  Qty : <input type="number" v-model:value="qty" min="1" max="10"/>
+  Total: Rp {{price * qty}}
+   <hr>
+    <label><input type="checkbox" v-model:value="showBonus"> Show Bonus</label>
+    <div class="detail" v-if="showBonus">
+      <p v-if="qty >= 10">Maaf kamu hanya boleh beli {{ qty }} aja yah.. soalnya kita gak punya banyak stok</p>
+      <p v-else-if="qty >= 5">Whoaa tukang borong nih!</p>
+      <p v-else-if="qty >= 2">Selamat! Kamu dapat bonus, karena membeli {{ qty }} buku</p>
+      <p v-else>Beli lebih banyak lagi untuk dapatkan bonus :)</p>
+    </div>
+	</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+  <script>
+    let app = new Vue({
+      el: ".app1",
+      data: {
+        showBonus: true,
+        name: "Battlefield 4",
+        cover: "images/battlefield4.jpg",
+        price: 140000,
+        qty: 1
+      }
+    })
+	
+	let app2 = new Vue({
+		el: `.app2`,
+		data:{
+			showBonus : true,
+			name: `Grand Theft Auto V`,
+			cover : `images/gtav.jpg`,
+			price : 100000,
+			qty : 1
+		}
+	})
+	
+	let app3 = new Vue({
+		el: `.app3`,
+		data:{
+			showBonus:true,
+			name: `Homefront`,
+			cover : `images/homefront.jpg`,
+			price: 120000,
+			qty:1
+		}
+	})
+  </script>
+</body>
+</html>
