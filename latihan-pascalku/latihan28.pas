@@ -146,6 +146,7 @@ uses
           writeln('Oops! barang yang anda beli tidak ada!');
        end
    end;
+    writeln('Terima kasih sudah membeli :)');
 
   end
 
