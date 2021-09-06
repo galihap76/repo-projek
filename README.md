@@ -1,4 +1,4 @@
-Beberapa projek yang telah saya buat telah saya repository di sini.
+Repositori github ku.
 
 <!---
 galihap76/galihap76 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
