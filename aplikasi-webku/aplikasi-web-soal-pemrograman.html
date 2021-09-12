@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Aplikasi Web Soal Pemrograman</title>
+        <link href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <style>
+			.judul-projek{
+				color:white;
+				margin-left:9px;
+			}
+			.potoku img{
+				display:block;
+				width:110px;
+				margin-left:20px;
+				border-radius:50%;
+			}
+			.card-body{
+				box-shadow: 1px 1px 3px 0px gray,
+							0px -1px 3px 0px gray;		
+			}
+		</style>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <h4 class="judul-projek">Aplikasi Web Soal Pemrograman</h4>
+            <button class="btn btn-link btn-sm order-1 order-lg-0  ml-4" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>   
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav" class="bg-dark text-light">
+                <nav class="sb-sidenav accordion sb-sidenav-primary" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                           <div class="potoku">
+                            <center><img src="img/profileku.jpg"></center>
+							</div>
+                           <div class="sb-sidenav-menu-heading">About Me</div>
+                            <a class="nav-link" href="https://galihap76.github.io/portofolio-ku.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-file-person-fill"></i></div>
+                                About Me
+                            </a>						
+                               <div class="sb-sidenav-menu-heading">Aplikasi</div>
+                                <a class="nav-link" href="aplikasi-web-film.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                                Film
+                            </a>       
+                                <a class="nav-link" href="aplikasi-web-makanan.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                                Makanan
+                            </a>	
+                             <a class="nav-link" href="aplikasi-web-poto-hewan.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                               Poto Hewan
+                            </a>
+                           <a class="nav-link" href="aplikasi-web-teks-suara.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                               Teks Suara
+                            </a>	
+                             <a class="nav-link" href="aplikasi-web-game-dino-google-kw.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                               Game Dino Google Kw
+                            </a>	
+                             <a class="nav-link" href="aplikasi-web-soal-pemrograman.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                               Soal Pemrograman
+                            </a>	
+                             <a class="nav-link" href="aplikasi-web-kalkulator-js-sederhana.html">
+                                <div class="sb-nav-link-icon"><i class="bi bi-app"></i></div>
+                               Kalkulator Js Sederhana 
+                            </a>				         			                                     
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                    <div class="container-fluid mb-5">
+                       <div class="row">
+                       <div class="col">
+                        <h1 class="mt-4 font-weight-bold">Aplikasi Web Soal Pemrograman</h1>
+                           <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">Halo, selamat datang di aplikasi web soal pemrograman. saya membuat aplikasi web soal pemrograman pilih salah satu jawaban yang tersedia ketiga kolom lalu pilih soal selanjut nya sampai selesai, kamu bisa mengetes kemampuan ilmu pengetahuan pemrograman di sini :D <br> <br> HANYA INFO : Aplikasi yang saya buat ini tidaklah secanggih aplikasi yang kalian temukan namun aplikasi ini cukup memuaskan di mana saya bisa menciptakan sebuah aplikasi dan bisa di gunakan.</li>
+							</ol>
+						</div>		
+							</div>
+						<div class="row justify-content-center">
+			         <div class="alert alert-success d-none info-benar" role="alert">
+						JAWABAN KAMU BENAR SEMUA, SELAMAT!
+				</div>
+			         <div class="alert alert-danger d-none info-salah" role="alert">
+						JAWABAN KAMU ADA YANG SALAH, HARAP COBA LAGI!
+					    <center>
+						    <button class="btn btn-danger btn_cobalagi d-block mt-3" type="button">
+		  					COBA LAGI!
+						</button>
+						 </center>
+							</div>
+	       
+<!--
+			          <div class="alert alert-warning d-none info-validasi" role="alert">
+						OOPS KUIS KAMU BELUM SELESAI!
+				</div>
+-->
+				         <form method="post">
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+   
+    	<h6 class="">1. Manakah singkatan dari HTML itu?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Text Markup Language">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Transfer Market Long">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Hyper Transfer Mood Lose">
+</div>
+  </div>
+</div>
+		
+<!--		Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+ Jawaban pada kolom kesatu : Hyper Text Markup Language merupakan bahasa markah untuk bisa membuat sebuah website karena bisa di ibaratkan HTML merupakan tulang manusia tanpa adanya HTML sebuah halaman website tidak akan ada. 
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Soal Kedua -->
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">2. Siapakah pencipta javascript?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Brendan Eich">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Douglas Crockford">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Mark Zuckerberg">
+</div>
+  </div>
+</div>
+<!-- 		Info -->
+ 		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+  Jawaban pada kolom kesatu : beliau merupakan seorang programmer asal netscape dan javascript pertama kali diciptakan oleh pak brendan eich, seorang karyawan netscape, pada tahun 1995. netscape kala itu merupakan perusahaan software ternama yang dikenal dengan web browser miliknya, netscape navigator.
+</div>
+ 		
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Soal Ketiga-->
+  			<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+   
+    	<h6 class="">3. Bahasa pemrograman mana yang menggunakan berbasis client side?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript & PHP">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="PHP">
+</div>
+   
+  </div>
+</div>
+ 		
+ 	<!--		Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+  Jawaban pada kolom kedua : karena javascript merupakan bahasa pemrograman tingkat tinggi yang berjalan kebanyakan dari web browser yang di jalankan juga pada interpreter. maksud dari client side ini bahasa pemrograman web yang pengolahan datanya dilakukan oleh komputer pengguna/pengunjung bagian dari browser nya tersendiri yang bisa kodenya di lihat juga oleh user maupun developer dan programmer.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--   	Soal Keempat-->
+   	<div class="row">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    
+    	<h6 class="">4. Manakah yang termasuk database management system?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="MYSQL">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="CSS Flexbox">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Delphi 7">
+</div>
+  
+  </div>
+</div>
+ 		
+ <!--		Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+ Jawaban pada kolom satu : MYSQL ini merupakan software database management system atau ini juga bisa di bilang server database. sederhana nya kegunaan MYSQL ini untuk menyimpan data seperti ketika website ada fitur login dan password. maka data akan tersimpan pada database management system MYSQL.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+<!--  	Soal Kelima -->
+   			<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">5. Manakah yang termasuk bahasa pemrograman untuk dekstop?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Javascript">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Delphi 7">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="HTML">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+ 	<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+  Jawaban pada kolom kedua : Delphi 7 ini merupakan lingkungan pengembangan dan berbasis windows. yang berorientasi bahasa pemrograman pascal karena delphi ini kebanyakan untuk membangun aplikasi dekstop namun bisa juga untuk membangun web dan perangkat mobile.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+   	
+<!--   	Soal Keenam-->
+   			<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">6. Dalam sebuah promise javascript ketika data berhasil di kirimkan keadaan apa yang di berikan ?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Fullfilled">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Pending">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Rejected">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+ 		<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+ Jawaban pada kolom kesatu : dalam javascript ada sebuah fitur asynchronus yaitu promise dalam promise ketika data sudah terpenuhi dan berhasil sampai tujuan maka keadaan yang di berikan adalah fullfilled yang bisa di terjemahkan (terpenuhi) ketika seorang programmer bekerja menggunakan API (Application Programming Interface).
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+   	
+<!--   	Soal Ketujuh-->
+   		<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">7. Kepanjangan ajax yaitu ?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Asynchronus Javascript And XMLHttpRequest">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Anonymous Javascript Attack XSS">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Asynchronus Javascript And XSS">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+ 		<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+ Jawaban pada kolom satu : sederhana nya teknologi ini mempermudah ketika ada request client ke server jadi ketika ada perubahan data halaman pada website tidak perlu di refresh kembali.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+   	
+<!--   	  	Soal Kedelapan-->
+   		<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">8. Konsep IF pada bahasa pemrograman yaitu ?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar program bisa berbicara">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar program tidak berjalan">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar program bisa berpikir">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+ 		<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+  Jawaban pada kolom ketiga : IF pada bahasa pemrograman ini agar ketika membuat sebuah program, program akan berpikir yang di berikan oleh programmer di mana program ini akan melakukan sesuatu sebagai contoh : <br> let namaku = 'galih'; <br>  if(namaku == 'galih'){ <br>  alert('Hai galih selamat datang');
+  } <br> <br>
+  Penjelasan nya tersebut apakah program di atas yang terletak pada di dalam if ('galih') tersebut sama dengan namaku yang di isi dengan 'galih'? jika sama tampilkan ('Hai galih selamat datang') jika tidak sesuai atau tidak sama, tidak di tampilkan pada program.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+   	
+   	<!--   	  	Soal Kesembilan-->
+   		<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">9. Konsep variabel pada pemrograman yaitu ?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar membuang data">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar menyimpan data dari database">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Agar bisa di olah dan di gunakan nanti">
+  
+</div>
+ 
+  </div>
+  
+</div>
+ 		
+ 		<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+  Jawaban pada kolom kedua : sederhana nya variabel pada pemrograman untuk menyimpan sebuah nilai atau data program agar bisa di olah ataupun di gunakan nanti nya sesuai kebutuhan, pada variabel ini akan di simpan pada memori.
+</div>
+  		</center>  
+   		</div>			
+   	</div> 
+   	
+   		<!--   	  	Soal Kesepuluh-->
+   		<div class="row mb-4">
+   		<div class="col">
+   		<center>
+			<div class="card mt-5 border-all">
+   <div class="card-body">
+    	<h6 class="">10. Konsep else pada pemrograman yaitu ?</h6>
+    	<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="jawaban"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Ketika program tidak ada pilihan yang benar">
+</div>
+   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Ketika program merulang variabel">
+</div>
+   <div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="checkbox" aria-label="Radio button for following text input" name="selainPilihanbenar"/>
+    </div>
+  </div>
+  <input type="text" class="form-control bg-light" aria-label="Text input with radio button" readonly placeholder="Menolak program agar tidak di eksekusi">
+  
+</div>
+ 
+  </div>
+  
+</div>
+		
+		<!--Info-->
+		<br>
+		<br>
+ 		<div class="alert alert-success info-jawaban d-none" role="alert">
+ Jawaban pada kolom satu : Konsep dan tugas else pada pemrograman ketika program memiliki sebuah percabangan seperti IF dan ELSE IF namun tidak ada yang benar maka di dalam kondisi else akan di jalankan.
+</div>
+ 		
+  		</center>  
+   		</div>			
+   	</div> 
+   	<div class="row">
+   	<div class="col">
+   	<div >
+   	<center><button type="button" class="btn btn-warning font-weight-bold">Cek keberhasilan!</button>
+			<button class="btn btn-primary btn_loading d-none" type="button" disabled>
+		  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+		  Loading...
+		</button>
+   	</center>
+   	
+		</div>
+		
+		</div>
+   
+	   </div>
+	    </form>
+				</div>       
+				</div>	
+			</div>		
+			
+		</div>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+        <script src="script-app6.js"></script>
+    </body>
+</html>
