@@ -3,6 +3,10 @@ session_start();
 
 include_once 'database-query.php';
 
+if(!isset($_SESSION["login"])){
+	header("Location: login.php");
+	exit;
+}
 
 //visitors
 $visitors = mysqli_query($conn, "SELECT * FROM visitor");
@@ -12,12 +16,9 @@ while($row = mysqli_fetch_array($visitors)){
  $jml_baru = $jml_sekarang + 1;
  $update_visitors = mysqli_query($conn, "UPDATE visitor SET visitor='$jml_baru'");
   }
-if(!isset($_SESSION["login"])){
-	header("Location: login.php");
-	exit;
-}
 
-
+//dashboard
+$dashboard = queryDashboard("SELECT * FROM dashboard");
 ?>
 
 
@@ -97,7 +98,7 @@ if(!isset($_SESSION["login"])){
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="login.php">Login</a>
+                                   
                                             <a class="nav-link" href="registrasi.php">Register</a>
                                             <a class="nav-link" href="lupa-password.php">Forgot Password</a>           				                                                      
                         </div>
@@ -109,7 +110,7 @@ if(!isset($_SESSION["login"])){
                             </a>
 				<a class="nav-link" href="tambah.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                              Halaman Tambah Pasien
+                               Tambah Pasien
                             </a>
 				<a class="nav-link" href="profil-dokter.php">
                                 <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
@@ -137,7 +138,9 @@ if(!isset($_SESSION["login"])){
 									<div class="card-body"><h4 class="text-center font-weight-bold">Pasien Pulang</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
 <!--                                        <a class="small text-white stretched-link" href="#">View Details</a>-->
-										<center><h4>550 Jiwa</h4> </center>              
+                                        <?php foreach($dashboard as $row): ?>
+										<center><h4><?php echo $row["pasien_pulang"]; ?> Jiwa</h4> </center>   
+                                        <?php endforeach; ?>
                                   </div>
                                 </div>
                             </div>
@@ -145,7 +148,9 @@ if(!isset($_SESSION["login"])){
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body"><h4 class="text-center font-weight-bold">Pasien Di Rawat</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-										<center><h4>214 Jiwa</h4></center>
+										 <?php foreach($dashboard as $row): ?>
+										<center><h4><?php echo $row["pasien_rawat"]; ?> Jiwa</h4> </center>   
+                                        <?php endforeach; ?>
 <!--                                        <a class="small text-white stretched-link" href="#">View Details</a>-->
                                     </div>
                                 </div>
@@ -155,8 +160,9 @@ if(!isset($_SESSION["login"])){
                                     <div class="card-body"><h4 class="text-center font-weight-bold">Pasien Meninggal</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
 <!--                                        <a class="small text-white stretched-link" href="#">View Details</a>-->
-										<center><h4>109 Jiwa</h4></center>
-                                       
+										 <?php foreach($dashboard as $row): ?>
+										<center><h4><?php echo $row["pasien_meninggal"]; ?> Jiwa</h4> </center>   
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </div>                                                    
@@ -167,7 +173,9 @@ if(!isset($_SESSION["login"])){
                                     <div class="card-body"><h4 class="text-center font-weight-bold">Dokter</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
 <!--                                        <a class="small text-white stretched-link" href="#">View Details</a>-->
-										<center><h4>14 Dokter</h4></center>
+										 <?php foreach($dashboard as $row): ?>
+										<center><h4><?php echo $row["dokter"]; ?> Dokter</h4> </center>   
+                                        <?php endforeach; ?>
                                        
                                     </div>
                                 </div>
@@ -177,7 +185,9 @@ if(!isset($_SESSION["login"])){
                                     <div class="card-body"><h4 class="text-center font-weight-bold">Rawat Inap</h4></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
 <!--                                        <a class="small text-white stretched-link" href="#">View Details</a>-->
-										<center><h4>11 Rawat Inap</h4></center>
+										 <?php foreach($dashboard as $row): ?>
+										<center><h4><?php echo $row["rawat_inap"]; ?> Rawat Inap</h4> </center>   
+                                        <?php endforeach; ?>
                                        
                                     </div>
                                 </div>
@@ -193,4 +203,3 @@ if(!isset($_SESSION["login"])){
         <script src="scripts.js"></script>
     </body>
 </html>
-

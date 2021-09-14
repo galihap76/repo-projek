@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 include_once 'database-query.php';
 
@@ -125,7 +125,7 @@ if(isset($_POST["submit"])){
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="login.php">Login</a>
+                                    
                                             <a class="nav-link" href="registrasi.php">Register</a>
                                             <a class="nav-link" href="lupa-password.php">Forgot Password</a>           				                                                      
                         </div>
@@ -137,7 +137,7 @@ if(isset($_POST["submit"])){
                             </a>
                             <a class="nav-link" href="tambah.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                              Halaman Tambah Pasien
+                               Tambah Pasien
                             </a>
 				<a class="nav-link" href="profil-dokter.php">
                                 <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>
@@ -190,7 +190,7 @@ if(isset($_POST["submit"])){
         <option>Mawar</option>
       </select>
     </div>
-		  <button type="submit" name="submit" class="btn btn-primary btn-kirim mb-3">Kirim</button>
+		  <button type="submit" name="submit" class="btn btn-primary btn-kirim mb-3">Ubah</button>
 		 
 		</form>
 			</div>
@@ -207,4 +207,3 @@ if(isset($_POST["submit"])){
         <script src="scripts.js"></script>
     </body>
 </html>
-

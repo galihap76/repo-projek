@@ -14,7 +14,12 @@ if(isset($_POST["register"])){
 		</script>
 		";
 	  }else{
-		  echo mysqli_error($conn);
+		 echo "
+		<script>
+		alert('User baru gagal di tambahkan!');
+		document.location.href='registrasi.php';
+		</script>
+		";
 	  }
   }
 
@@ -81,7 +86,7 @@ if(isset($_POST["register"])){
                                               
                                             </div>                              
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button type="submit" class="btn btn-primary" name="register">Sign Up</a>
+                                                <button type="submit" class="btn btn-primary" name="register">Sign Up</button>
                                             </div>
                                         </form>
                                     </div>
@@ -98,4 +103,3 @@ if(isset($_POST["register"])){
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
-

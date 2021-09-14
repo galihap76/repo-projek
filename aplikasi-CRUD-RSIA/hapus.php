@@ -7,7 +7,9 @@ if(!isset($_SESSION["login"])){
 	header("Location: login.php");
 	exit;
 }
-$id=$_GET["id"];
+$id= abs((int)$_GET["id"];
+         
+   //cek apakah data berhasil di hapus atau tidak
 if(hapus($id)>0){
 	echo "
 		<script>

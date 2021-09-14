@@ -86,7 +86,7 @@ if(!isset($_SESSION["login"])){
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="login.php">Login</a>
+                                   
                                             <a class="nav-link" href="registrasi.php">Register</a>
                                             <a class="nav-link" href="lupa-password.php">Forgot Password</a>           				                                                      
                         </div>
@@ -98,7 +98,7 @@ if(!isset($_SESSION["login"])){
                             </a>
 				<a class="nav-link" href="tambah.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                              Halaman Tambah Pasien
+                               Tambah Pasien
                             </a>
 				<a class="nav-link" href="profil-dokter.php">
                                 <div class="sb-nav-link-icon"><i class="bi bi-people-fill"></i></div>

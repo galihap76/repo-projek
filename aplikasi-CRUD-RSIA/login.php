@@ -4,9 +4,9 @@ session_start();
 include_once 'database-query.php';
 
 //cek cookie
-if(isset($_COOKIE["WWWDI"]) && isset($_COOKIE["WWWEYK"])){
-     $id = $_COOKIE['WWWDI'];
-	$key = $_COOKIE['WWWEYK'];
+if(isset($_COOKIE["iu"]) && isset($_COOKIE["ku"])){
+     $id = $_COOKIE['iu']; // ID USER
+	$key = $_COOKIE['ku']; // KEY USER
 	
 	//ambil username berdasarkan id
 	
@@ -14,7 +14,7 @@ if(isset($_COOKIE["WWWDI"]) && isset($_COOKIE["WWWEYK"])){
 	$row = mysqli_fetch_assoc($result);
 	
 	//cek cookie dan username
-	if($key === hash('sha256', $row['username'])){
+	if($key === hash('sha512', $row['username'])){
 		$_SESSION['login']=true;
 	}
 }
@@ -38,15 +38,26 @@ if(isset($_COOKIE["WWWDI"]) && isset($_COOKIE["WWWEYK"])){
 			    //cek remember me
 			  if(isset($_POST["remember"])){
 				  //buat cookie
-				 setcookie('WWWDI', hash('haval256,5', $row['id']), time()+60);
-				  setcookie('WWWEYK', hash('sha256', $row["username"]), time()+60);
+				 setcookie('iu', hash('sha512', $row['id']), time()+250);
+				  setcookie('ku', hash('sha512', $row["username"]), time()+250);
 			  }
 			  
-			  header("Location: index.php");
-			  exit;
+			  header("Location: index.php");	
+		  }else{
+			  echo "<script>
+			  alert('Maaf login anda salah!');
+			document.location.href='login.php';
+			  </script>";
+			  
 		  }
+          //jika tidak ada username dan password yang benar (kedua nya salah)
+	  }if(mysqli_num_rows($result) === 0){
+		  echo "<script>
+			  alert('Maaf login anda salah!');
+			document.location.href='login.php';
+			  </script>";
 	  }
-	  $error = true;
+	  
   }
 
 ?>
@@ -131,4 +142,3 @@ if(isset($_COOKIE["WWWDI"]) && isset($_COOKIE["WWWEYK"])){
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
-
