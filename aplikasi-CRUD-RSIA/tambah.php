@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 
 include_once 'database-query.php';
@@ -173,9 +173,17 @@ if(isset($_POST["submit"])){
 		 <div class="form-group col-md-4">
       <label for="kamar">Kamar Pasien</label>
       <select class="form-control" name="kamar" id="kamar">
-        <option>Kamar Pasien</option>
-        <option>Melati</option>
+        <option>Bougenville</option>
+        <option>Anggrek</option>
         <option>Mawar</option>
+        <option>Melati</option>
+        <option>Cempaka</option>
+        <option>HCU</option>
+        <option>Kenanga</option>
+        <option>Neonatologi</option>
+        <option>Delima 1</option>
+        <option>Delima 2</option>
+        <option>Delima 3</option>
       </select>
     </div>
 		  <button type="submit" name="submit" class="btn btn-primary btn-kirim mb-3">Tambah</button>
