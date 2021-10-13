@@ -1,2 +1,2 @@
-Beberapa projek aplikasi saya simpan di repositori ini.
+Beberapa projek aplikasi atau latihan saya, saya simpan di repositori ini.
 
