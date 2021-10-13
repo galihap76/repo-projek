@@ -1,6 +1,7 @@
 <?php
 //koneksi database
 $conn = mysqli_connect("localhost", "root", "", "database_rumah_sakit");
+//$conn = mysqli_connect("sql112.epizy.com", "epiz_29324022", "6ADGFlK1h8I4", "epiz_29324022_database_rumah_sakit");
 
 
 //tampilkan data pasien rumah sakit dari database
