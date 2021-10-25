@@ -1,1 +1,1 @@
-#hanya sebatas aplikasi sistem antrian loket sederhana
+##hanya sebatas aplikasi sistem antrian loket sederhana
